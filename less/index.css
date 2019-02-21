@@ -152,6 +152,8 @@ body {
   padding: 30px 30px;
   max-width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .word {
   display: block;
@@ -210,12 +212,80 @@ body {
   font-size: 6.2em;
 }
 .contact p {
-  margin: 5px;
+  margin: 15px;
   padding-bottom: 20px;
 }
 .info {
   font-size: 1.2em;
   font-weight: bold;
+}
+.container .main-content {
+  margin: 80px;
+}
+.clicky {
+  /** Offset the Position **/
+  position: relative;
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+  /** 3D Block Effect **/
+  box-shadow: 0 10px 0 0 #6B2A4A;
+  /** Make it look pretty **/
+  display: block;
+  background: #a47;
+  color: #eee;
+  padding: 1em 2em;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.2em;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+.clicky:active {
+  /** Remove 3D Block Effect on Click **/
+  box-shadow: none;
+  top: 10px;
+  margin-bottom: 0;
+}
+.clicky:hover {
+  opacity: 1;
+}
+.clicky:active,
+.clicky:focus {
+  /** Remove Chrome's Ugly Yellow Outline **/
+  outline: 0;
+}
+.clicky {
+  width: 100px;
+  height: 40px;
+  animation: myfirst 5s;
+  animation: myfirst 5s infinite;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+@keyframes myfirst {
+  /* Firefox */
+  0% {
+    background: palevioletred;
+  }
+  50% {
+    background: #4E8AB4;
+  }
+  100% {
+    background: palevioletred;
+  }
+}
+@keyframes myfirst {
+  /* Safari and Chrome */
+  0% {
+    background: palevioletred;
+  }
+  50% {
+    background: #4E8AB4;
+  }
+  100% {
+    background: palevioletred;
+  }
 }
 .container {
   animation: 1.5s ease-out 0s 1 slideInFromLeft;
@@ -229,5 +299,5 @@ body {
   }
 }
 p:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
