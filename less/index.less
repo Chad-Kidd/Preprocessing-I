@@ -17,9 +17,9 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
+	// margin: 0;
+	// padding: 0;
+	// border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -32,9 +32,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
+// ol, ul {
+// 	list-style: none;
+// }
 blockquote, q {
 	quotes: none;
 }
@@ -57,3 +57,156 @@ html, body {
     height: 100%;
 }
 
+@import url(https://fonts.googleapis.com/css?family=BenchNine:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
+*{
+	box-sizing:border-box;
+}
+
+html,body{
+  height:100%; 
+  background: linear-gradient(left, #BFE6FC, white,#BFE6FC);
+  background: linear-gradient(to right, #BFE6FC, white,#BFE6FC);
+}
+
+.container{
+	padding: 30px 30px;
+  max-width:100%;
+	height:100%;
+	display: flex;
+	flex-direction: column;
+}
+
+// Key Words Colors and Sizes
+
+.word {
+  display:block;
+  text-align:justify;
+  font-family: "BenchNine";
+  line-height:0.8;
+  text-transform:uppercase;
+  letter-spacing:0px;
+}
+
+.word1, .word2 {color: palevioletred}
+.word3, .word4 {color:#4E8AB4}
+.word5, .word6{color: black}
+.word7 {color:#6B7B8A}
+.word8, .word9{color:#8B8091}
+.word10, .word11{color:#B68FA2}
+.word12, .word13{color:#F7C711}
+
+.word1{font-size:6.3em}
+.word2{font-size:7.1em}
+.word3{font-size:4.8em}
+.word5{font-size:4.8em}
+.word7{font-size:4.5em}
+.word8{font-size:4.8em}
+.word12{font-size:6.2em}
+
+.contact p {
+	margin: 15px;
+	padding-bottom: 20px;
+}
+.info {
+	font-size: 1.2em;
+	font-weight: bold;
+	// font-style: italic;
+}
+
+// MAIN CONTENT 
+
+.container .main-content {
+margin: 80px;
+
+}
+
+// BUTTON
+.clicky {
+	/** Offset the Position **/
+	position: relative;
+	top: 0;
+	margin-top: 0;
+	margin-bottom: 10px;
+  
+	/** 3D Block Effect **/
+	box-shadow: 0 10px 0 0 #6B2A4A;
+  
+	/** Make it look pretty **/
+	display: block;
+	background: #a47;
+	color: #eee;
+	padding: 1em 2em;
+	border: 0;
+	cursor: pointer;
+	font-size: 1.2em;
+	opacity: 0.9;
+	border-radius: 10px;
+  }
+  
+  .clicky:active {
+	/** Remove 3D Block Effect on Click **/
+	box-shadow: none;
+	top: 10px;
+	margin-bottom: 0;
+  }
+  
+  .clicky:hover {
+	opacity: 1;
+  }
+  
+  .clicky:active,
+  .clicky:focus {
+	/** Remove Chrome's Ugly Yellow Outline **/
+	outline: 0;
+  }
+
+
+  //BUTTON ANIMATION
+  .clicky {
+    width:100px;
+    height:40px;
+	// background:red;
+	animation:myfirst 5s;
+	animation:myfirst 5s infinite;
+	padding-bottom: 20px;
+	border-radius: 20px;
+}
+
+@keyframes myfirst /* Firefox */ {
+    0% {background:palevioletred;}
+    50% {background:#4E8AB4;}
+    100% {background:palevioletred;}
+}
+
+@keyframes myfirst /* Safari and Chrome */ {
+    0% {background:palevioletred;}
+    50% {background:#4E8AB4;}
+    100% {background:palevioletred;}
+}
+
+
+// FULL PAGE ANIMATION / CONTAINER
+.container {
+	// opacity: 1.0;
+	// border-radius: 10px;
+	animation: 1.5s ease-out 0s 1 slideInFromLeft;
+	 
+  }
+  
+  @keyframes slideInFromLeft {
+	0% {
+	  transform: translateY(-100%);
+	}
+	100% {
+	  transform: translateY(0);
+	}
+  }
+
+
+
+  p:hover {
+	transform: scale(1.1);
+	}
+	
